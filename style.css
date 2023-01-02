@@ -1,0 +1,48 @@
+tr {
+  width: 399px;
+}
+
+td {
+  position: relative; /*einzelne Tabelle Spalte td ist flexibel nicht an Position fixiert*/
+  width: 133px;
+  height: 133px;
+  border: 5px solid black;
+  cursor: pointer;
+}
+
+td:hover{
+  background-color: rgba(25, 221, 0, 0.08);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table tr:first-child td { /*Oberern Rand von allen Zellen in der ersten Reihe werden gelöscht*/
+  border-top: 0;
+}
+
+table tr td:first-child { /*linker Rand von allen Zellen in jeder Reihe werden gelöscht*/
+  border-left: 0;
+}
+
+table tr:last-child td { /*Unteren Rand von allen Zellen in letzte Reihe werden gelöscht*/
+  border-bottom: 0;
+}
+
+table tr td:last-child { /*rechter Rand von letzte Zellen von allen Reihen werden gelöscht*/
+  border-right: 0;
+}
+
+.shape{
+  position: absolute;  /*x-o-images werden in den Felder positioniert mit position: absolute;*/
+  width: 80px;
+  height: 80px;
+  left: 26px;  /*x-o-images werden in den Felder positioniert mit position: absolute;*/
+  top: 26px; /*x-o-images werden in den Felder positioniert mit position: absolute;*/
+}
+
+.d-none {
+  display: none;
+}
+
