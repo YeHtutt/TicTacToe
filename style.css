@@ -1,30 +1,37 @@
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 0;
+  overflow-x: hidden;
+}
+
+.playGround {
+  position: relative;
 }
 
 
 .player-panel {
   display: flex;
+  justify-content: center;
   font-size: 32px;
+  height: 30vh;
 }
 
 .player-panel img {
-  width: 60px;
-  height: 60px;
-  margin-right: 8px;
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
 }
 
 .player-panel div {
   display: flex;
   align-items: center;
-  margin-right: 8px;
-  margin-left: 8px;
-  margin-bottom: 120px;
-  margin-top: 16px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 30px;
   color: whitesmoke;
 }
 
@@ -45,8 +52,13 @@ td:hover {
   background-color: rgba(25, 221, 0, 0.08);
 }
 
+
+/*tabelle Container*/
 table {
   border-collapse: collapse;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 table tr:first-child td {
@@ -88,6 +100,11 @@ table tr td:last-child {
   opacity: 0.5;
 }
 
+.lineContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .horizontal-line {
   height: 10px;
@@ -115,57 +132,82 @@ table tr td:last-child {
   left: 0;
   width: 100%;
   z-index: 2;
-  height: 89%;
-  object-fit: fill;
-  animation: zoomIn 225ms ease-in-out;
+  height: 100%;
+  object-fit: cover;
+  animation: fadeIn 300ms ease-in-out;
 }
 
-@keyframes zoomIn {
+@keyframes fadeIn {
 
   /*Annimation ZoomIn Funktion mit Keyframes*/
   from {
     opacity: 0;
-    transform: scale(0);
+    /*transform: scale(0);*/
   }
 
   to {
     opacity: 1;
-    transform: scale(1);
+    /*transform: scale(1);*/
+  }
+}
+
+.noWinner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  z-index: 1;
+  animation: zoomIn 400ms ease-in-out;
+}
+
+
+@keyframes zoomIn {
+
+  /*Annimation ZoomIn Funktion mit Keyframes*/
+ from {
+  transform: scale(0);
+  }
+
+  to {
+  transform: scale(1);
   }
 }
 
 
 .restart-btn {
   z-index: 2;
-  width: 300px;
+  width: 80vw;
   height: 70px;
-  color: white;
+  color: navajowhite;
   font-size: 40px;
-  background-color: skyblue;
+  font-weight: bolder;
+  background-color:  rgb(51, 153, 194);
   cursor: pointer;
   position: absolute;
-  bottom: 13vh;
+  bottom: 10px;
   border-radius: 25px;
 }
 
 .restart-btn:hover {
-  background-color: rgb(51, 153, 194);
+  background-color: skyblue;
 }
 
 .showWinner {
   font-size: 32px;
   border: 1px solid rgba(0, 0, 0, 0.5);
-  background-color: #a0eceb;
-  height: 80px;
+  background-color: #b8d3d3;
+  height: 10vh;
   width: 100vw;
   position: absolute;
+  top: 0px;
   z-index: 2;
-  bottom: 0px;
   text-align: center;
   color: blueviolet;
 }
 
-.slider-bg-image{
+.slider-bg-image {
   height: 100vh;
   width: 100vw;
   z-index: -1;
@@ -178,7 +220,7 @@ table tr td:last-child {
 }
 
 
-.slider-container{
+.slider-container {
   height: 100vh;
   width: 100vw;
   position: relative;

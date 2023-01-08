@@ -10,39 +10,44 @@
     <script src="script.js"></script>
 </head>
 
-<body onload="startSlider()">
-        <img class="gameOver d-none" id="gameOver" src="img/GameOver01.jpg">
-        <button class="restart-btn d-none" id="restart-btn" onclick="restart()">Restart</button>
-        <div class="showWinner d-none" id="showWinner"></div>
+<body>
+    <img class="gameOver d-none" id="gameOver" src="img/win.jpg">
+    <button class="restart-btn d-none" id="restart-btn" onclick="restart()">Restart</button>
+    <div class="showWinner d-none" id="showWinner"></div>
+    <img class="noWinner d-none" id="noWinner" src="img/lose02.jpg">
 
-        <div class="slider-container">
-            <img class="slider-bg-image" id="img-1" src="img/bg1.jpg">
-            <img class="slider-bg-image" style="transform: translateX(100%);" id="img-2" src="img/bg3.jpg">
+    <div class="slider-container">
+        <img class="slider-bg-image" id="img-1" src="img/bg3.jpg">
 
 
-            <div class="player-panel">
-                <div class="player-inactive" id="player-1">
-                    <img class="" src="./img/circle.png">player1
-                </div>
-                <div>
-                    <img class="" src="./img/cross.png" id="player-2">player2
+        <div class="player-panel">
+            <div class="player-inactive" id="player-1">
+                <img class="" src="./img/circle.png">player1
+            </div>
+            <div>
+                <img class="" src="./img/cross.png" id="player-2">player2
+            </div>
+        </div>
+
+
+
+        <div class="playGround">
+            <div class="lineContainer">
+                <div id="line-1" class="horizontal-line" style="top: 60px;"></div>
+                <div id="line-2" class="horizontal-line" style="top: 200px;"></div>
+                <div id="line-3" class="horizontal-line" style="top: 339px;"></div>
+
+                <div id="line-4" class="horizontal-line make-vertical"
+                    style="top: 198px; transform:translateX(-138px) rotate(90deg) scaleX(0)"></div> <!--left: -10px; -->
+                <div id="line-5" class="horizontal-line make-vertical" style="top: 198px; "></div> <!--left: 129px;-->
+                <div id="line-6" class="horizontal-line make-vertical"
+                    style="top: 198px; transform:translateX(138px) rotate(90deg) scaleX(0);"></div> <!--left: 269px;-->
+
+                <div id="line-7" class="horizontal-line" style="transform: rotate(45deg) scaleX(0); top: 199px; "></div>
+                <!--querstrich-->
+                <div id="line-8" class="horizontal-line" style="transform: rotate(-45deg) scaleX(0); top: 199px; ">
                 </div>
             </div>
-
-
-            <div id="line-1" class="horizontal-line" style="top: 266px;"></div>
-            <div id="line-2" class="horizontal-line" style="top: 406px;"></div>
-            <div id="line-3" class="horizontal-line" style="top: 545px;"></div>
-
-            <div id="line-4" class="horizontal-line make-vertical"
-                style="top: 404px; transform:translateX(-138px) rotate(90deg) scaleX(0)"></div> <!--left: -10px; -->
-            <div id="line-5" class="horizontal-line make-vertical" style="top: 404px; "></div> <!--left: 129px;-->
-            <div id="line-6" class="horizontal-line make-vertical"
-                style="top: 404px; transform:translateX(138px) rotate(90deg) scaleX(0);"></div> <!--left: 269px;-->
-
-            <div id="line-7" class="horizontal-line" style="transform: rotate(45deg) scaleX(0); top: 405px; "></div>
-            <!--querstrich-->
-            <div id="line-8" class="horizontal-line" style="transform: rotate(-45deg) scaleX(0); top: 405px; "></div>
             <!--querstrich-->
 
 
@@ -90,7 +95,10 @@
                     </td>
                 </tr>
             </table>
+
+
         </div>
+    </div>
 
 </body>
 
